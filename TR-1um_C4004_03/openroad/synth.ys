@@ -1,0 +1,27 @@
+# Yosys Synthesis Script for c4004_core (TR-1um STDCELL + SRAM128) - Trial 02
+read_liberty -lib /Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_03/module/STDCELL/tr1um_typ_5v0_25c.lib
+read_liberty -lib /Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_03/module/SRAM128/SRAM128.lib
+
+read_verilog /Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_03/rtl/c4004_core.v
+hierarchy -check -top c4004_core
+
+proc; opt -full; memory; opt -full
+wreduce; peepopt; opt_clean
+techmap -map /usr/local/share/yosys/techmap.v; opt -full
+opt_dff
+
+# Map enabled FFs directly to MUXDFFRB, remaining FFs to DFFRB / DFFS
+techmap -map /Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_03/openroad/dffe_map.v
+dfflibmap -liberty /Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_03/module/STDCELL/tr1um_typ_5v0_25c.lib
+opt -full
+
+# Map combinational logic with ABC
+abc -exe /usr/local/bin/yosys-abc -liberty /Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_03/module/STDCELL/tr1um_typ_5v0_25c.lib -dont_use BUFTH -dont_use DEL1 -dont_use OSS_ESD_5V_DIO -dont_use REG8x16 -dont_use RSLATCH
+
+opt_clean -purge
+insbuf -buf BUF_X2 A Y
+splitnets -ports
+opt_clean -purge
+
+stat -liberty /Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_03/module/STDCELL/tr1um_typ_5v0_25c.lib -liberty /Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_03/module/SRAM128/SRAM128.lib
+write_verilog -noattr -noexpr -nohex /Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_03/openroad/c4004_core_raw_syn.v

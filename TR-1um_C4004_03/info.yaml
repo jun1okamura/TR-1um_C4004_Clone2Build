@@ -1,0 +1,29 @@
+# ----- ------ ----- ----- ------ ----- ----- ------ -----
+# OpenSUSI TR-1um MPW Project Configuration
+# LICENSE: Apache License Version 2.0
+# http://www.apache.org/licenses/
+# ----- ------ ----- ----- ------ ----- ----- ------ -----
+
+project:
+  title: "C4004 4-bit CPU (Trial 03)"
+  author: "jun1okamura"
+  discord: ""
+  description: "Intel 4004 compatible 4-bit CPU with X1 Pre-Read Pipelined ALU and GCell-Aligned 10-row layout on TR-1um"
+
+gds:
+  top_cell: "tr_1um_jun1okamura"
+  extension: "gds"
+
+lvs:
+  extension: "cir"
+  netlist_only: false
+
+mdp:
+  file: "IP62_jun1okamura.gds"
+
+pdk:
+  repo: "https://github.com/OpenSUSI/TR-1um.git"
+  ref:  "v1.2609.0"
+  dir:  "libs.tech"
+
+yaml_version: 6

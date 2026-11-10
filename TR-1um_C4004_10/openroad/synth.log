@@ -1,0 +1,973 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.68+ (git sha1 a5af9d690, Release, AppleClang /usr/bin/c++ 17.0.0.17000603) [github.com/The-OpenROAD-Project/yosys at HEAD]
+
+-- Executing script file `openroad/synth.ys' --
+
+1. Executing Liberty frontend: /Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/module/STDCELL/tr1um_typ_5v0_25c.lib
+Imported 39 cell types from liberty file.
+
+2. Executing Liberty frontend: /Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/module/SRAM128/SRAM128.lib
+Imported 1 cell types from liberty file.
+
+3. Executing Verilog-2005 frontend: /Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v
+Parsing Verilog input from `/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v' to AST representation.
+Generating RTLIL representation for module `\c4004_core'.
+Successfully finished Verilog frontend.
+
+4. Executing HIERARCHY pass (managing design hierarchy).
+
+4.1. Analyzing design hierarchy..
+Top module:  \c4004_core
+
+4.2. Analyzing design hierarchy..
+Top module:  \c4004_core
+Removed 0 unused modules.
+
+5. Executing PROC pass (convert processes to netlists).
+
+5.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+5.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 9 switch rules as full_case in process $proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:313$147 in module c4004_core.
+Marked 4 switch rules as full_case in process $proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:263$120 in module c4004_core.
+Marked 5 switch rules as full_case in process $proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:220$82 in module c4004_core.
+Removed 1 dead cases from process $proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:80$42 in module c4004_core.
+Marked 12 switch rules as full_case in process $proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:80$42 in module c4004_core.
+Removed a total of 1 dead cases.
+
+5.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 1 redundant assignment.
+Promoted 9 assignments to connections.
+
+5.4. Executing PROC_INIT pass (extract init attributes).
+
+5.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst_n in `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:313$147'.
+
+5.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~44 debug messages>
+
+5.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:313$147'.
+     1/16: $0\phase[2:0]
+     2/16: $0\wpm_half[0:0]
+     3/16: $0\dcl_reg[2:0]
+     4/16: $0\reg_buf[3:0]
+     5/16: $0\buf_h[3:0]
+     6/16: $0\buf_m[3:0]
+     7/16: $0\buf_l[3:0]
+     8/16: $0\pc_cout[0:0]
+     9/16: $0\isz_taken[0:0]
+    10/16: $0\pc_init_n[0:0]
+    11/16: $0\two_cycle[0:0]
+    12/16: $0\sp[1:0]
+    13/16: $0\opa[3:0]
+    14/16: $0\opr[3:0]
+    15/16: $0\cy[0:0]
+    16/16: $0\acc[3:0]
+Creating decoders for process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:263$120'.
+     1/8: $4\d_out[3:0]
+     2/8: $4\d_oe[0:0]
+     3/8: $3\d_out[3:0]
+     4/8: $3\d_oe[0:0]
+     5/8: $2\d_out[3:0]
+     6/8: $2\d_oe[0:0]
+     7/8: $1\d_out[3:0]
+     8/8: $1\d_oe[0:0]
+Creating decoders for process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:220$82'.
+     1/15: $5\alu_cin[0:0]
+     2/15: $5\alu_b[3:0]
+     3/15: $5\alu_a[3:0]
+     4/15: $4\alu_cin[0:0]
+     5/15: $4\alu_b[3:0]
+     6/15: $4\alu_a[3:0]
+     7/15: $3\alu_cin[0:0]
+     8/15: $3\alu_b[3:0]
+     9/15: $3\alu_a[3:0]
+    10/15: $2\alu_cin[0:0]
+    11/15: $2\alu_b[3:0]
+    12/15: $2\alu_a[3:0]
+    13/15: $1\alu_cin[0:0]
+    14/15: $1\alu_b[3:0]
+    15/15: $1\alu_a[3:0]
+Creating decoders for process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:80$42'.
+     1/48: $12\sram_ce_en[0:0]
+     2/48: $12\sram_we[0:0]
+     3/48: $12\sram_din[3:0]
+     4/48: $12\sram_addr[4:0]
+     5/48: $11\sram_ce_en[0:0]
+     6/48: $11\sram_we[0:0]
+     7/48: $11\sram_addr[4:0]
+     8/48: $11\sram_din[3:0]
+     9/48: $10\sram_ce_en[0:0]
+    10/48: $10\sram_we[0:0]
+    11/48: $10\sram_addr[4:0]
+    12/48: $10\sram_din[3:0]
+    13/48: $9\sram_ce_en[0:0]
+    14/48: $9\sram_we[0:0]
+    15/48: $9\sram_din[3:0]
+    16/48: $9\sram_addr[4:0]
+    17/48: $8\sram_ce_en[0:0]
+    18/48: $8\sram_we[0:0]
+    19/48: $8\sram_din[3:0]
+    20/48: $8\sram_addr[4:0]
+    21/48: $7\sram_ce_en[0:0]
+    22/48: $7\sram_we[0:0]
+    23/48: $7\sram_din[3:0]
+    24/48: $7\sram_addr[4:0]
+    25/48: $6\sram_ce_en[0:0]
+    26/48: $6\sram_we[0:0]
+    27/48: $6\sram_addr[4:0]
+    28/48: $6\sram_din[3:0]
+    29/48: $5\sram_ce_en[0:0]
+    30/48: $5\sram_we[0:0]
+    31/48: $5\sram_addr[4:0]
+    32/48: $5\sram_din[3:0]
+    33/48: $4\sram_ce_en[0:0]
+    34/48: $4\sram_we[0:0]
+    35/48: $4\sram_addr[4:0]
+    36/48: $4\sram_din[3:0]
+    37/48: $3\sram_ce_en[0:0]
+    38/48: $3\sram_we[0:0]
+    39/48: $3\sram_din[3:0]
+    40/48: $3\sram_addr[4:0]
+    41/48: $2\sram_ce_en[0:0]
+    42/48: $2\sram_we[0:0]
+    43/48: $2\sram_din[3:0]
+    44/48: $2\sram_addr[4:0]
+    45/48: $1\sram_ce_en[0:0]
+    46/48: $1\sram_we[0:0]
+    47/48: $1\sram_addr[4:0]
+    48/48: $1\sram_din[3:0]
+
+5.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\c4004_core.\d_out' from process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:263$120'.
+No latch inferred for signal `\c4004_core.\d_oe' from process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:263$120'.
+No latch inferred for signal `\c4004_core.\alu_a' from process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:220$82'.
+No latch inferred for signal `\c4004_core.\alu_b' from process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:220$82'.
+No latch inferred for signal `\c4004_core.\alu_cin' from process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:220$82'.
+No latch inferred for signal `\c4004_core.\sram_addr' from process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:80$42'.
+No latch inferred for signal `\c4004_core.\sram_din' from process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:80$42'.
+No latch inferred for signal `\c4004_core.\sram_we' from process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:80$42'.
+No latch inferred for signal `\c4004_core.\sram_ce_en' from process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:80$42'.
+
+5.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\c4004_core.\phase' using process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:313$147'.
+  created $adff cell `$procdff$1116' with positive edge clock and positive level reset.
+Creating register for signal `\c4004_core.\acc' using process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:313$147'.
+  created $adff cell `$procdff$1121' with positive edge clock and positive level reset.
+Creating register for signal `\c4004_core.\cy' using process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:313$147'.
+  created $adff cell `$procdff$1126' with positive edge clock and positive level reset.
+Creating register for signal `\c4004_core.\opr' using process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:313$147'.
+  created $adff cell `$procdff$1131' with positive edge clock and positive level reset.
+Creating register for signal `\c4004_core.\opa' using process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:313$147'.
+  created $adff cell `$procdff$1136' with positive edge clock and positive level reset.
+Creating register for signal `\c4004_core.\sp' using process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:313$147'.
+  created $adff cell `$procdff$1141' with positive edge clock and positive level reset.
+Creating register for signal `\c4004_core.\two_cycle' using process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:313$147'.
+  created $adff cell `$procdff$1146' with positive edge clock and positive level reset.
+Creating register for signal `\c4004_core.\pc_init_n' using process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:313$147'.
+  created $adff cell `$procdff$1151' with positive edge clock and positive level reset.
+Creating register for signal `\c4004_core.\isz_taken' using process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:313$147'.
+  created $adff cell `$procdff$1156' with positive edge clock and positive level reset.
+Creating register for signal `\c4004_core.\pc_cout' using process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:313$147'.
+  created $adff cell `$procdff$1161' with positive edge clock and positive level reset.
+Creating register for signal `\c4004_core.\buf_l' using process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:313$147'.
+  created $adff cell `$procdff$1166' with positive edge clock and positive level reset.
+Creating register for signal `\c4004_core.\buf_m' using process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:313$147'.
+  created $adff cell `$procdff$1171' with positive edge clock and positive level reset.
+Creating register for signal `\c4004_core.\buf_h' using process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:313$147'.
+  created $adff cell `$procdff$1176' with positive edge clock and positive level reset.
+Creating register for signal `\c4004_core.\reg_buf' using process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:313$147'.
+  created $adff cell `$procdff$1181' with positive edge clock and positive level reset.
+Creating register for signal `\c4004_core.\dcl_reg' using process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:313$147'.
+  created $adff cell `$procdff$1186' with positive edge clock and positive level reset.
+Creating register for signal `\c4004_core.\wpm_half' using process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:313$147'.
+  created $adff cell `$procdff$1191' with positive edge clock and positive level reset.
+
+5.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+5.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 23 empty switches in `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:313$147'.
+Removing empty process `c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:313$147'.
+Found and cleaned up 4 empty switches in `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:263$120'.
+Removing empty process `c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:263$120'.
+Found and cleaned up 5 empty switches in `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:220$82'.
+Removing empty process `c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:220$82'.
+Found and cleaned up 12 empty switches in `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:80$42'.
+Removing empty process `c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:80$42'.
+Cleaned up 44 empty switches.
+
+5.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module c4004_core.
+<suppressed ~91 debug messages>
+
+6. Executing OPT pass (performing simple optimizations).
+
+6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module c4004_core.
+<suppressed ~169 debug messages>
+
+6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\c4004_core'.
+Computing hashes of 530 cells of `\c4004_core'.
+Finding duplicate cells in `\c4004_core'.
+Computing hashes of 317 cells of `\c4004_core'.
+Finding duplicate cells in `\c4004_core'.
+Computing hashes of 308 cells of `\c4004_core'.
+Finding duplicate cells in `\c4004_core'.
+<suppressed ~666 debug messages>
+Removed a total of 222 cells.
+
+6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \c4004_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~165 debug messages>
+
+6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \c4004_core.
+    New ctrl vector for $pmux cell $procmux$1085: { $procmux$801_CMP $procmux$841_CMP $procmux$1106_CMP $procmux$1107_CMP $procmux$1108_CMP }
+    New ctrl vector for $pmux cell $procmux$401: { $procmux$446_CMP [1] $procmux$445_CMP [1] $auto$opt_reduce.cc:137:opt_pmux$1194 $procmux$437_CMP $procmux$438_CMP $procmux$408_CMP $procmux$409_CTRL }
+    New ctrl vector for $pmux cell $procmux$1076: { $procmux$801_CMP $procmux$841_CMP $procmux$1106_CMP $procmux$1107_CMP $procmux$1108_CMP $procmux$1109_CMP }
+    New ctrl vector for $pmux cell $procmux$1094: { $procmux$801_CMP $procmux$841_CMP $procmux$1106_CMP $procmux$1107_CMP $procmux$1109_CMP $procmux$1110_CMP }
+    Consolidated identical input bits for $mux cell $procmux$1072:
+      Old ports: A={ 1'1 \sp 2'01 }, B={ 1'0 \opa [3:1] 1'0 }, Y=$procmux$1072_Y
+      New ports: A={ \sp 2'01 }, B={ \opa [3:1] 1'0 }, Y=$procmux$1072_Y [3:0]
+      New connections: $procmux$1072_Y [4] = $procmux$1072_Y [0]
+    New ctrl vector for $pmux cell $procmux$322: { $procmux$323_CMP $auto$opt_reduce.cc:137:opt_pmux$1196 $procmux$328_CMP }
+    Consolidated identical input bits for $mux cell $procmux$729:
+      Old ports: A=$12\sram_addr[4:0], B={ 1'0 \opa [3:1] 1'1 }, Y=$procmux$729_Y
+      New ports: A=\opa [0], B=1'1, Y=$procmux$729_Y [0]
+      New connections: $procmux$729_Y [4:1] = { 1'0 \opa [3:1] }
+    New ctrl vector for $pmux cell $procmux$1103: { $procmux$801_CMP $procmux$841_CMP $procmux$1106_CMP $procmux$1107_CMP }
+    New ctrl vector for $pmux cell $procmux$276: { $procmux$323_CMP $auto$opt_reduce.cc:137:opt_pmux$1198 $procmux$328_CMP }
+    New ctrl vector for $pmux cell $procmux$248: { $procmux$323_CMP $auto$opt_reduce.cc:137:opt_pmux$1200 $procmux$328_CMP }
+    New ctrl vector for $pmux cell $procmux$511: { $procmux$801_CMP $procmux$841_CMP $auto$opt_reduce.cc:137:opt_pmux$1202 }
+    New ctrl vector for $pmux cell $procmux$235: $auto$opt_reduce.cc:137:opt_pmux$1204
+    New ctrl vector for $pmux cell $procmux$209: { $procmux$450_CMP $auto$opt_reduce.cc:137:opt_pmux$1206 }
+    Consolidated identical input bits for $mux cell $procmux$856:
+      Old ports: A=$8\sram_addr[4:0], B={ 1'1 \sp 2'01 }, Y=$procmux$856_Y
+      New ports: A=2'10, B=2'01, Y=$procmux$856_Y [1:0]
+      New connections: $procmux$856_Y [4:2] = { 1'1 \sp }
+    Consolidated identical input bits for $mux cell $ternary$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:447$164:
+      Old ports: A=4'1001, B=4'1010, Y=$ternary$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:447$164_Y
+      New ports: A=2'01, B=2'10, Y=$ternary$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:447$164_Y [1:0]
+      New connections: $ternary$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:447$164_Y [3:2] = 2'10
+    Consolidated identical input bits for $mux cell $ternary$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:245$103:
+      Old ports: A=4'0000, B=4'0110, Y=$ternary$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:245$103_Y
+      New ports: A=1'0, B=1'1, Y=$ternary$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:245$103_Y [1]
+      New connections: { $ternary$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:245$103_Y [3:2] $ternary$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:245$103_Y [0] } = { 1'0 $ternary$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:245$103_Y [1] 1'0 }
+    New ctrl vector for $pmux cell $procmux$442: { $procmux$443_CMP $procmux$447_CMP $auto$opt_reduce.cc:137:opt_pmux$1210 $auto$opt_reduce.cc:137:opt_pmux$1208 $procmux$452_CTRL }
+    New ctrl vector for $pmux cell $procmux$432: { $procmux$445_CMP [2] $auto$opt_reduce.cc:137:opt_pmux$1212 $procmux$445_CMP [0] $procmux$436_CMP $procmux$437_CMP $procmux$438_CMP $procmux$439_CMP $procmux$441_CMP }
+    New input vector for $reduce_or cell $auto$opt_reduce.cc:131:opt_pmux$1211: { $procmux$446_CMP $procmux$440_CMP [0] }
+  Optimizing cells in module \c4004_core.
+    Consolidated identical input bits for $mux cell $procmux$767:
+      Old ports: A=$11\sram_addr[4:0], B=5'00001, Y=$procmux$767_Y
+      New ports: A={ \opa [3:1] $procmux$729_Y [0] }, B=4'0001, Y=$procmux$767_Y [3:0]
+      New connections: $procmux$767_Y [4] = 1'0
+    Consolidated identical input bits for $mux cell $ternary$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:244$104:
+      Old ports: A=$ternary$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:245$103_Y, B=4'1111, Y=$ternary$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:244$104_Y
+      New ports: A={ $ternary$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:245$103_Y [1] 1'0 }, B=2'11, Y=$ternary$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:244$104_Y [1:0]
+      New connections: $ternary$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:244$104_Y [3:2] = { $ternary$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:244$104_Y [0] $ternary$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:244$104_Y [1] }
+  Optimizing cells in module \c4004_core.
+Performed a total of 21 changes.
+
+6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\c4004_core'.
+Computing hashes of 318 cells of `\c4004_core'.
+Finding duplicate cells in `\c4004_core'.
+Computing hashes of 314 cells of `\c4004_core'.
+Finding duplicate cells in `\c4004_core'.
+<suppressed ~12 debug messages>
+Removed a total of 4 cells.
+
+6.6. Executing OPT_SHARE pass.
+
+6.7. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $procdff$1126 ($adff) from module c4004_core (D = $procmux$412_Y, Q = \cy).
+Adding EN signal on $procdff$1146 ($adff) from module c4004_core (D = $procmux$359_Y, Q = \two_cycle).
+Adding EN signal on $procdff$1181 ($adff) from module c4004_core (D = $procmux$215_Y, Q = \reg_buf).
+Adding EN signal on $procdff$1121 ($adff) from module c4004_core (D = $procmux$442_Y, Q = \acc).
+Adding EN signal on $procdff$1161 ($adff) from module c4004_core (D = $procmux$301_Y, Q = \pc_cout).
+Adding EN signal on $procdff$1171 ($adff) from module c4004_core (D = $procmux$258_Y, Q = \buf_m).
+Adding EN signal on $procdff$1136 ($adff) from module c4004_core (D = \d_in, Q = \opa).
+Adding EN signal on $procdff$1186 ($adff) from module c4004_core (D = \acc [2:0], Q = \dcl_reg).
+Adding EN signal on $procdff$1166 ($adff) from module c4004_core (D = $procmux$288_Y, Q = \buf_l).
+Adding EN signal on $procdff$1131 ($adff) from module c4004_core (D = \d_in, Q = \opr).
+Adding EN signal on $procdff$1191 ($adff) from module c4004_core (D = $not$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:410$161_Y, Q = \wpm_half).
+Adding EN signal on $procdff$1151 ($adff) from module c4004_core (D = $procmux$337_Y, Q = \pc_init_n).
+Adding EN signal on $procdff$1176 ($adff) from module c4004_core (D = $procmux$241_Y, Q = \buf_h).
+Adding EN signal on $procdff$1156 ($adff) from module c4004_core (D = $ne$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:387$159_Y, Q = \isz_taken).
+Adding EN signal on $procdff$1141 ($adff) from module c4004_core (D = $procmux$369_Y, Q = \sp).
+
+6.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \c4004_core..
+Removed 28 unused cells and 742 unused wires.
+<suppressed ~30 debug messages>
+
+6.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module c4004_core.
+<suppressed ~59 debug messages>
+
+6.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+6.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \c4004_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~105 debug messages>
+
+6.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \c4004_core.
+    Consolidated identical input bits for $pmux cell $procmux$322:
+      Old ports: A=1'0, B=2'00, Y=$procmux$322_Y
+      New connections: $procmux$322_Y = 1'0
+    Consolidated identical input bits for $pmux cell $procmux$276:
+      Old ports: A=$procmux$274_Y, B={ \buf_m $procmux$280_Y }, Y=$procmux$276_Y
+      New connections: $procmux$276_Y = \buf_m
+    Consolidated identical input bits for $pmux cell $procmux$248:
+      Old ports: A=$procmux$246_Y, B={ \reg_buf $procmux$252_Y }, Y=$procmux$248_Y
+      New connections: $procmux$248_Y = \reg_buf
+    New ctrl vector for $pmux cell $procmux$215: { $eq$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:302$123_Y $procmux$1005_CMP }
+    New ctrl vector for $pmux cell $procmux$412: $eq$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:306$138_Y
+  Optimizing cells in module \c4004_core.
+Performed a total of 5 changes.
+
+6.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\c4004_core'.
+Computing hashes of 317 cells of `\c4004_core'.
+Finding duplicate cells in `\c4004_core'.
+Computing hashes of 301 cells of `\c4004_core'.
+Finding duplicate cells in `\c4004_core'.
+<suppressed ~48 debug messages>
+Removed a total of 16 cells.
+
+6.14. Executing OPT_SHARE pass.
+    Found cells that share an operand and can be merged by moving the $mux $procmux$369 in front of them:
+        $add$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:508$182
+        $sub$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:401$160
+
+6.15. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \c4004_core..
+Removed 0 unused cells and 54 unused wires.
+<suppressed ~1 debug messages>
+
+6.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module c4004_core.
+<suppressed ~2 debug messages>
+
+6.18. Rerunning OPT passes. (Maybe there is more to do..)
+
+6.19. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \c4004_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~102 debug messages>
+
+6.20. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \c4004_core.
+    Consolidated identical input bits for $mux cell $auto$opt_share.cc:244:merge_operators$1365:
+      Old ports: A=2'11, B=2'01, Y=$auto$rtlil.cc:3402:Mux$1366
+      New ports: A=1'1, B=1'0, Y=$auto$rtlil.cc:3402:Mux$1366 [1]
+      New connections: $auto$rtlil.cc:3402:Mux$1366 [0] = 1'1
+  Optimizing cells in module \c4004_core.
+Performed a total of 1 changes.
+
+6.21. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\c4004_core'.
+Computing hashes of 300 cells of `\c4004_core'.
+Finding duplicate cells in `\c4004_core'.
+Removed a total of 0 cells.
+
+6.22. Executing OPT_SHARE pass.
+
+6.23. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $auto$ff.cc:337:slice$1255 ($adffe) from module c4004_core (D = \c4, Q = \pc_cout).
+
+6.24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \c4004_core..
+Removed 1 unused cells and 3 unused wires.
+<suppressed ~2 debug messages>
+
+6.25. Executing OPT_EXPR pass (perform const folding).
+Optimizing module c4004_core.
+<suppressed ~1 debug messages>
+
+6.26. Rerunning OPT passes. (Maybe there is more to do..)
+
+6.27. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \c4004_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~98 debug messages>
+
+6.28. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \c4004_core.
+Performed a total of 0 changes.
+
+6.29. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\c4004_core'.
+Computing hashes of 301 cells of `\c4004_core'.
+Finding duplicate cells in `\c4004_core'.
+Computing hashes of 300 cells of `\c4004_core'.
+Finding duplicate cells in `\c4004_core'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+6.30. Executing OPT_SHARE pass.
+
+6.31. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.32. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \c4004_core..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+6.33. Executing OPT_EXPR pass (perform const folding).
+Optimizing module c4004_core.
+
+6.34. Rerunning OPT passes. (Maybe there is more to do..)
+
+6.35. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \c4004_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~98 debug messages>
+
+6.36. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \c4004_core.
+Performed a total of 0 changes.
+
+6.37. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\c4004_core'.
+Computing hashes of 300 cells of `\c4004_core'.
+Finding duplicate cells in `\c4004_core'.
+Removed a total of 0 cells.
+
+6.38. Executing OPT_SHARE pass.
+
+6.39. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.40. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \c4004_core..
+
+6.41. Executing OPT_EXPR pass (perform const folding).
+Optimizing module c4004_core.
+
+6.42. Finished fast OPT passes. (There is nothing left to do.)
+
+7. Executing MEMORY pass.
+
+7.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+7.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+7.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+7.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+7.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+7.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \c4004_core..
+
+7.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+7.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+7.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \c4004_core..
+
+7.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+7.11. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+8. Executing OPT pass (performing simple optimizations).
+
+8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module c4004_core.
+
+8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\c4004_core'.
+Computing hashes of 300 cells of `\c4004_core'.
+Finding duplicate cells in `\c4004_core'.
+Removed a total of 0 cells.
+
+8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \c4004_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~98 debug messages>
+
+8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \c4004_core.
+Performed a total of 0 changes.
+
+8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\c4004_core'.
+Computing hashes of 300 cells of `\c4004_core'.
+Finding duplicate cells in `\c4004_core'.
+Removed a total of 0 cells.
+
+8.6. Executing OPT_SHARE pass.
+
+8.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \c4004_core..
+
+8.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module c4004_core.
+
+8.10. Finished fast OPT passes. (There is nothing left to do.)
+
+9. Executing WREDUCE pass (reducing word size of cells).
+Removed top 2 bits (of 9) from port B of cell c4004_core.$auto$opt_dff.cc:320:make_patterns_logic$1246 ($ne).
+Removed top 2 bits (of 8) from port B of cell c4004_core.$auto$opt_dff.cc:320:make_patterns_logic$1215 ($ne).
+Removed top 2 bits (of 3) from port B of cell c4004_core.$eq$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:57$5 ($eq).
+Removed top 1 bits (of 2) from port B of cell c4004_core.$eq$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:223$85 ($eq).
+Removed top 1 bits (of 3) from port B of cell c4004_core.$eq$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:226$90 ($eq).
+Removed top 2 bits (of 3) from port B of cell c4004_core.$add$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:332$149 ($add).
+Removed top 2 bits (of 4) from port B of cell c4004_core.$eq$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:476$167 ($eq).
+Removed top 2 bits (of 4) from port B of cell c4004_core.$eq$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:483$181 ($eq).
+Removed top 1 bits (of 4) from port B of cell c4004_core.$procmux$212_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell c4004_core.$procmux$323_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell c4004_core.$procmux$325_CMP0 ($eq).
+Removed top 3 bits (of 4) from port B of cell c4004_core.$procmux$328_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell c4004_core.$procmux$365_CMP0 ($eq).
+Removed top 2 bits (of 4) from port B of cell c4004_core.$procmux$408_CMP0 ($eq).
+Removed top 3 bits (of 4) from port B of cell c4004_core.$procmux$410_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell c4004_core.$procmux$428_CMP0 ($eq).
+Removed top 2 bits (of 4) from port B of cell c4004_core.$procmux$429_CMP0 ($eq).
+Removed top 3 bits (of 4) from port B of cell c4004_core.$procmux$430_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell c4004_core.$procmux$436_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell c4004_core.$procmux$437_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell c4004_core.$procmux$438_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell c4004_core.$procmux$439_CMP0 ($eq).
+Removed top 2 bits (of 4) from port B of cell c4004_core.$procmux$440_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell c4004_core.$procmux$1108_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell c4004_core.$procmux$1109_CMP0 ($eq).
+Removed top 2 bits (of 3) from port B of cell c4004_core.$procmux$1110_CMP0 ($eq).
+Removed top 2 bits (of 4) from wire c4004_core.$ternary$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:447$164_Y.
+Removed top 1 bits (of 5) from wire c4004_core.$11\sram_addr[4:0].
+Removed top 1 bits (of 5) from wire c4004_core.$10\sram_addr[4:0].
+Removed top 1 bits (of 5) from wire c4004_core.$7\sram_addr[4:0].
+
+10. Executing PEEPOPT pass (run peephole optimizers).
+
+11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \c4004_core..
+Removed 0 unused cells and 4 unused wires.
+<suppressed ~1 debug messages>
+
+12. Executing TECHMAP pass (map to technology primitives).
+
+12.1. Executing Verilog-2005 frontend: /usr/local/share/yosys/techmap.v
+Parsing Verilog input from `/usr/local/share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+12.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $adffe.
+Using extmapper simplemap for cells of type $reduce_bool.
+Using extmapper simplemap for cells of type $ne.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $eq.
+Running "alumacc" on wrapper $extern:wrap:$le:Y_WIDTH=1:B_WIDTH=4:A_WIDTH=4:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$le:Y_WIDTH=1:B_WIDTH=4:A_WIDTH=4:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$le:Y_WIDTH=1:B_WIDTH=4:A_WIDTH=4:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $logic_or.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $mux.
+Running "alumacc" on wrapper $extern:wrap:$gt:Y_WIDTH=1:B_WIDTH=4:A_WIDTH=4:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$gt:Y_WIDTH=1:B_WIDTH=4:A_WIDTH=4:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$gt:Y_WIDTH=1:B_WIDTH=4:A_WIDTH=4:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using extmapper simplemap for cells of type $logic_not.
+Running "alumacc" on wrapper $extern:wrap:$add:Y_WIDTH=3:B_WIDTH=1:A_WIDTH=3:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$add:Y_WIDTH=3:B_WIDTH=1:A_WIDTH=3:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$add:Y_WIDTH=3:B_WIDTH=1:A_WIDTH=3:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$add:Y_WIDTH=2:B_WIDTH=2:A_WIDTH=2:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$add:Y_WIDTH=2:B_WIDTH=2:A_WIDTH=2:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$add:Y_WIDTH=2:B_WIDTH=2:A_WIDTH=2:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using extmapper simplemap for cells of type $pmux.
+Using extmapper simplemap for cells of type $adff.
+Using template $paramod$7e708ae28ab761f11d0fb59d3ffc72f6a4baf5d9\_90_alu for cells of type $alu.
+Using template $paramod$3ef7d3dd227da7627a99c5e5a6a4deb817573e39\_90_alu for cells of type $alu.
+Using template $paramod$740b056ede97228d3eae64ea2fdc81f0a33e0fe7\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000100 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000100 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000011 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000011 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000010 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000010 for cells of type $lcu.
+No more expansions possible.
+<suppressed ~947 debug messages>
+
+13. Executing OPT pass (performing simple optimizations).
+
+13.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module c4004_core.
+<suppressed ~531 debug messages>
+
+13.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\c4004_core'.
+Computing hashes of 1143 cells of `\c4004_core'.
+Finding duplicate cells in `\c4004_core'.
+Computing hashes of 986 cells of `\c4004_core'.
+Finding duplicate cells in `\c4004_core'.
+Computing hashes of 943 cells of `\c4004_core'.
+Finding duplicate cells in `\c4004_core'.
+<suppressed ~600 debug messages>
+Removed a total of 200 cells.
+
+13.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \c4004_core..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+13.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \c4004_core.
+Performed a total of 0 changes.
+
+13.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\c4004_core'.
+Computing hashes of 943 cells of `\c4004_core'.
+Finding duplicate cells in `\c4004_core'.
+Removed a total of 0 cells.
+
+13.6. Executing OPT_SHARE pass.
+
+13.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+13.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \c4004_core..
+Removed 16 unused cells and 617 unused wires.
+<suppressed ~17 debug messages>
+
+13.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module c4004_core.
+<suppressed ~1 debug messages>
+
+13.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+13.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \c4004_core..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+13.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \c4004_core.
+Performed a total of 0 changes.
+
+13.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\c4004_core'.
+Computing hashes of 927 cells of `\c4004_core'.
+Finding duplicate cells in `\c4004_core'.
+Removed a total of 0 cells.
+
+13.14. Executing OPT_SHARE pass.
+
+13.15. Executing OPT_DFF pass (perform DFF optimizations).
+
+13.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \c4004_core..
+
+13.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module c4004_core.
+
+13.18. Finished fast OPT passes. (There is nothing left to do.)
+
+14. Executing OPT_DFF pass (perform DFF optimizations).
+
+15. Executing TECHMAP pass (map to technology primitives).
+
+15.1. Executing Verilog-2005 frontend: /Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/openroad/dffe_map.v
+Parsing Verilog input from `/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/openroad/dffe_map.v' to AST representation.
+Generating RTLIL representation for module `$_DFFE_PN0P_'.
+Generating RTLIL representation for module `$_DFFE_PN0N_'.
+Successfully finished Verilog frontend.
+
+15.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+16. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell DFF (noninv, pins=4, area=3849.10) is a direct match for cell type $_DFF_P_.
+  cell DFFRB (noninv, pins=5, area=3849.10) is a direct match for cell type $_DFF_PN0_.
+  cell DFFS (noninv, pins=5, area=3849.10) is a direct match for cell type $_DFF_PP1_.
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    \DFF _DFF_P_ (.CK( C), .D( D), .Q( Q), .QB(~Q));
+    unmapped dff cell: $_DFF_NN0_
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \DFFRB _DFF_PN0_ (.CK( C), .D( D), .Q( Q), .QB(~Q), .RSTB( R));
+    unmapped dff cell: $_DFF_PN1_
+    unmapped dff cell: $_DFF_PP0_
+    \DFFS _DFF_PP1_ (.CK( C), .D( D), .Q( Q), .QB(~Q), .SET( R));
+    unmapped dff cell: $_DFFE_NN_
+    unmapped dff cell: $_DFFE_NP_
+    unmapped dff cell: $_DFFE_PN_
+    unmapped dff cell: $_DFFE_PP_
+    unmapped dff cell: $_DFFSR_NNN_
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    unmapped dff cell: $_DFFSR_PNN_
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+16.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+<suppressed ~1 debug messages>
+Mapping DFF cells in module `\c4004_core':
+  mapped 41 $_DFF_PN0_ cells to \DFFRB cells.
+
+17. Executing OPT pass (performing simple optimizations).
+
+17.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module c4004_core.
+<suppressed ~1 debug messages>
+
+17.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\c4004_core'.
+Computing hashes of 1006 cells of `\c4004_core'.
+Finding duplicate cells in `\c4004_core'.
+Computing hashes of 965 cells of `\c4004_core'.
+Finding duplicate cells in `\c4004_core'.
+<suppressed ~123 debug messages>
+Removed a total of 41 cells.
+
+17.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \c4004_core..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+17.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \c4004_core.
+Performed a total of 0 changes.
+
+17.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\c4004_core'.
+Computing hashes of 965 cells of `\c4004_core'.
+Finding duplicate cells in `\c4004_core'.
+Removed a total of 0 cells.
+
+17.6. Executing OPT_SHARE pass.
+
+17.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+17.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \c4004_core..
+Removed 26 unused cells and 91 unused wires.
+<suppressed ~27 debug messages>
+
+17.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module c4004_core.
+
+17.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+17.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \c4004_core..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+17.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \c4004_core.
+Performed a total of 0 changes.
+
+17.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\c4004_core'.
+Computing hashes of 939 cells of `\c4004_core'.
+Finding duplicate cells in `\c4004_core'.
+Removed a total of 0 cells.
+
+17.14. Executing OPT_SHARE pass.
+
+17.15. Executing OPT_DFF pass (perform DFF optimizations).
+
+17.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \c4004_core..
+
+17.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module c4004_core.
+
+17.18. Finished fast OPT passes. (There is nothing left to do.)
+
+18. Executing ABC pass (technology mapping using ABC).
+
+18.1. Extracting gate netlist of module `\c4004_core' to `<abc-temp-dir>/input.blif'..
+
+18.1.1. Executed ABC.
+Extracted 897 gates and 977 wires to a netlist network with 78 inputs and 64 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_scl /var/folders/gf/nw84jb093fzd316tjgncxvrh0000gn/T/yosys-liberty-scl-cache/yosys_merged_5d8a06a0.scl 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+18.1.2. Re-integrating ABC results.
+ABC RESULTS:           AND2_X1 cells:       10
+ABC RESULTS:           AND3_X1 cells:        7
+ABC RESULTS:           AND4_X1 cells:        3
+ABC RESULTS:             AOI21 cells:       66
+ABC RESULTS:             AOI22 cells:       34
+ABC RESULTS:            INV_X1 cells:       42
+ABC RESULTS:              MUX2 cells:       54
+ABC RESULTS:             NAND2 cells:       81
+ABC RESULTS:             NAND3 cells:       39
+ABC RESULTS:             NAND4 cells:        6
+ABC RESULTS:              NOR2 cells:       62
+ABC RESULTS:              NOR3 cells:       30
+ABC RESULTS:              NOR4 cells:       10
+ABC RESULTS:             OAI21 cells:       52
+ABC RESULTS:             OAI22 cells:        4
+ABC RESULTS:               OR2 cells:       18
+ABC RESULTS:               OR3 cells:       11
+ABC RESULTS:               OR4 cells:        5
+ABC RESULTS:             XNOR2 cells:        6
+ABC RESULTS:              XOR2 cells:        7
+ABC RESULTS:        internal signals:      835
+ABC RESULTS:           input signals:       78
+ABC RESULTS:          output signals:       64
+Removing temp directory.
+Removing global temp directory.
+
+19. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \c4004_core..
+Removed 0 unused cells and 736 unused wires.
+<suppressed ~28 debug messages>
+
+20. Executing INSBUF pass (insert buffer cells for connected wires).
+Add c4004_core/$auto$insbuf.cc:97:execute$4853: \phase [1] -> $techmap$add$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:332$149.$auto$alumacc.cc:548:replace_alu$2071.P [1]
+Add c4004_core/$auto$insbuf.cc:97:execute$4854: \phase [2] -> $techmap$add$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:332$149.$auto$alumacc.cc:548:replace_alu$2071.P [2]
+Add c4004_core/$auto$insbuf.cc:97:execute$4855: $techmap$add$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:332$149.$auto$alumacc.cc:548:replace_alu$2071.P [0] -> $techmap$add$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:332$149.$auto$alumacc.cc:548:replace_alu$2071.Y [0]
+Add c4004_core/$auto$insbuf.cc:97:execute$4856: \acc [0] -> $techmap$gt$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:215$80.$auto$alumacc.cc:548:replace_alu$1960.P [0]
+Add c4004_core/$auto$insbuf.cc:97:execute$4857: \acc [3] -> $techmap$gt$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:215$80.$auto$alumacc.cc:548:replace_alu$1960.P [3]
+Add c4004_core/$auto$insbuf.cc:97:execute$4858: \opr [0] -> $techmap$le$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:63$30.$auto$alumacc.cc:548:replace_alu$1915.P [0]
+Add c4004_core/$auto$insbuf.cc:97:execute$4859: \opr [1] -> $techmap$le$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:63$30.$auto$alumacc.cc:548:replace_alu$1915.P [1]
+Add c4004_core/$auto$insbuf.cc:97:execute$4860: \opr [3] -> $techmap$le$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:63$30.$auto$alumacc.cc:548:replace_alu$1915.P [3]
+Add c4004_core/$auto$insbuf.cc:97:execute$4861: 1'x -> \bank_sel [0]
+
+21. Executing SPLITNETS pass (splitting up multi-bit signals).
+
+22. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \c4004_core..
+Removed 9 unused cells and 16 unused wires.
+<suppressed ~11 debug messages>
+
+23. Printing statistics.
+
+=== c4004_core ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+      640        - wires
+      640        - wire bits
+       76        - public wires
+       76        - public wire bits
+       19        - ports
+       19        - port bits
+      589 1.07E+06 cells
+       10    12830   AND2_X1
+        7  11226.6   AND3_X1
+        3   5773.8   AND4_X1
+       66    84678   AOI21
+       34  54529.2   AOI22
+       41 1.58E+05   DFFRB
+       42    26943   INV_X1
+       54 1.04E+05   MUX2
+       81  77946.3   NAND2
+       39    50037   NAND3
+        6   9622.8   NAND4
+       62  59662.6   NOR2
+       30    38490   NOR3
+       10    16038   NOR4
+       52    66716   OAI21
+        4   6415.2   OAI22
+       18    23094   OR2
+       11  17641.8   OR3
+        5     9623   OR4
+        1 2.16E+05   SRAM128
+        6   9622.8   XNOR2
+        7  11226.6   XOR2
+
+   Chip area for module '\c4004_core': 1070286.400000
+     of which used for sequential elements: 157813.100000 (14.74%)
+
+24. Executing Verilog backend.
+Dumping module `\c4004_core'.
+
+End of script. Logfile hash: adb57140c6, time: 0.26s, user: 0.09s, system: 0.02s, MEM: 28.41 MB peak
+Yosys 0.68+ (git sha1 a5af9d690, Release, AppleClang /usr/bin/c++ 17.0.0.17000603) [github.com/The-OpenROAD-Project/yosys at HEAD]
+Time spent: 58% 1x abc (0 sec), 11% 21x opt_expr (0 sec), ...

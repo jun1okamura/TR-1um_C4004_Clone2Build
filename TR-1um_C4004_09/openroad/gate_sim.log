@@ -1,0 +1,10 @@
+=== C4004 Functional Verification Summary ===
+Final PC        = 0x071 (expected 0x071)
+Final ACC       = 0x7   (expected 0x7)
+RAM[0][0xC7]    = 0x6   (expected 0x6)
+RAM_PORT[0][3]  = 0x6   (expected 0x6)
+ROM_PORT_OUT    = 0x6   (expected 0x6)
+WPM_BUF[0]      = 0x6   (expected 0x6)
+RAM_STAT[0..3]  = 1 2 3 4 (expected 1 2 3 4)
+PASS: All 45 Intel 4004 instructions verified with 0 errors!
+TR-1um_C4004_08/rtl/tb_c4004.v:321: $finish called at 123550000 (1ps)
