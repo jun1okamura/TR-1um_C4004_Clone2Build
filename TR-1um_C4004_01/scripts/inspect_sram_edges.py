@@ -1,7 +1,10 @@
+import os
 import pya
 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 ly = pya.Layout()
-ly.read("/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_01/module/SRAM128/SRAM128.gds")
+ly.read(os.path.join(BASE_DIR, "module/SRAM128/SRAM128.gds"))
 top = ly.top_cell()
 dbu = ly.dbu
 ox, oy = 82.1, 90.1

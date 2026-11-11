@@ -3,7 +3,7 @@ import re
 import json
 from collections import defaultdict
 
-BASE_DIR = "/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_09"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RAW_V    = os.path.join(BASE_DIR, "openroad/c4004_core_raw_syn.v")
 OUT_V    = os.path.join(BASE_DIR, "openroad/c4004_core_syn.v")
 CELL_INFO_JSON = os.path.join(BASE_DIR, "module/STDCELL/cell_info.json")

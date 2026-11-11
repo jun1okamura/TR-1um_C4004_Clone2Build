@@ -9,6 +9,7 @@ apr/OSS_FRAME_sim.spice (with 1.0 pF load on all pads):
 """
 
 import os
+import shutil
 import re
 import subprocess
 from concurrent.futures import ProcessPoolExecutor, as_completed
@@ -17,7 +18,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 APR_DIR = os.path.join(BASE_DIR, "apr")
 MODELS_DIR = os.path.join(BASE_DIR, "TR-1um", "libs.tech", "spice", "models")
 SIM_NETLIST = os.path.join(APR_DIR, "OSS_FRAME_sim.spice")
-NGSPICE_BIN = "/opt/homebrew/bin/ngspice"
+NGSPICE_BIN = shutil.which("ngspice") or "ngspice"
 
 
 def build_pwl_clk(num_steps, T_ns, tr_ns):
@@ -85,11 +86,11 @@ def make_common_deck(title, inst_bytes, T_ns, test_pin_v=5.0, meas_lines=None):
     deck = [
         f"* {title}",
         ".param vthMP=0 vthMN=0 vthMPE=0 vthMNE=0 magRR=1 magRS=1 magCSIO=1",
-        f".include \"{os.path.join(MODELS_DIR, 'models_IP62_cap_v5p1.lib')}\"",
-        f".include \"{os.path.join(MODELS_DIR, 'models_IP62_diode_v2.lib')}\"",
-        f".include \"{os.path.join(MODELS_DIR, 'models_IP62_mos_v2.lib')}\"",
-        f".include \"{os.path.join(MODELS_DIR, 'models_IP62_res_v5.lib')}\"",
-        f".include \"{SIM_NETLIST}\"",
+        ".include \"../TR-1um/libs.tech/spice/models/models_IP62_cap_v5p1.lib\"",
+        ".include \"../TR-1um/libs.tech/spice/models/models_IP62_diode_v2.lib\"",
+        ".include \"../TR-1um/libs.tech/spice/models/models_IP62_mos_v2.lib\"",
+        ".include \"../TR-1um/libs.tech/spice/models/models_IP62_res_v5.lib\"",
+        ".include \"OSS_FRAME_sim.spice\"",
         "",
         ".options reltol=1e-3 abstol=1e-9 vntol=1e-3 method=gear",
         "",

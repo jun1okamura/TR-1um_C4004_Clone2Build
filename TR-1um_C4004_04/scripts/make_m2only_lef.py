@@ -2,7 +2,7 @@ import os
 import re
 import pya
 
-BASE_DIR = "/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_04"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STDCELL_GDS = os.path.join(BASE_DIR, "module/STDCELL/TR-1um_STDCELL.gds")
 STDCELL_LEF = os.path.join(BASE_DIR, "module/STDCELL/TR-1um_cells.lef")
 SRAM_GDS    = os.path.join(BASE_DIR, "module/SRAM128/SRAM128.gds")

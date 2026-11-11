@@ -2,14 +2,14 @@ OpenROAD 26Q4-1310-g98c6045c72
 Features included (+) or not (-): -GPU +GUI +Python
 This program is licensed under the BSD-3 license. See the LICENSE file for details.
 Components of this program may be licensed under more restrictive licenses which must be honored.
-[INFO ODB-0227] LEF file: /Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/tmp/tr1um_grt.lef, created 3 layers, 1 vias
-[INFO ODB-0227] LEF file: /Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/openroad/TR-1um_cells_m2only.lef, created 37 library cells
-[INFO ODB-0227] LEF file: /Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/openroad/SRAM128_clean.lef, created 1 library cells
-[INFO ODB-0127] Reading DEF file: /Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/openroad/c4004_core_placed.def
+[INFO ODB-0227] LEF file: ./tmp/tr1um_grt.lef, created 3 layers, 1 vias
+[INFO ODB-0227] LEF file: openroad/TR-1um_cells_m2only.lef, created 37 library cells
+[INFO ODB-0227] LEF file: openroad/SRAM128_clean.lef, created 1 library cells
+[INFO ODB-0127] Reading DEF file: openroad/c4004_core_placed.def
 [INFO ODB-0128] Design: c4004_core
 [INFO ODB-0130]     Created 19 pins.
 [INFO ODB-0131]     Created 914 components and 4075 component-terminals.
 [INFO ODB-0133]     Created 663 nets and 2247 connections.
-[INFO ODB-0134] Finished DEF file: /Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/openroad/c4004_core_placed.def
+[INFO ODB-0134] Finished DEF file: openroad/c4004_core_placed.def
 [WARNING GRT-0300] Timing is not available, setting critical nets percentage to 0.
 [WARNING GRT-0115] Global routing finished with congestion. Check the congestion regions in the DRC Viewer.

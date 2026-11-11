@@ -8,14 +8,14 @@
 
 -- Executing script file `openroad/synth.ys' --
 
-1. Executing Liberty frontend: /Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/module/STDCELL/tr1um_typ_5v0_25c.lib
+1. Executing Liberty frontend: module/STDCELL/tr1um_typ_5v0_25c.lib
 Imported 39 cell types from liberty file.
 
-2. Executing Liberty frontend: /Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/module/SRAM128/SRAM128.lib
+2. Executing Liberty frontend: module/SRAM128/SRAM128.lib
 Imported 1 cell types from liberty file.
 
-3. Executing Verilog-2005 frontend: /Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v
-Parsing Verilog input from `/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v' to AST representation.
+3. Executing Verilog-2005 frontend: rtl/c4004_core.v
+Parsing Verilog input from `rtl/c4004_core.v' to AST representation.
 Generating RTLIL representation for module `\c4004_core'.
 Successfully finished Verilog frontend.
 
@@ -34,11 +34,11 @@ Removed 0 unused modules.
 Cleaned up 0 empty switches.
 
 5.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
-Marked 9 switch rules as full_case in process $proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:313$147 in module c4004_core.
-Marked 4 switch rules as full_case in process $proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:263$120 in module c4004_core.
-Marked 5 switch rules as full_case in process $proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:220$82 in module c4004_core.
-Removed 1 dead cases from process $proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:80$42 in module c4004_core.
-Marked 12 switch rules as full_case in process $proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:80$42 in module c4004_core.
+Marked 9 switch rules as full_case in process $proc$rtl/c4004_core.v:313$147 in module c4004_core.
+Marked 4 switch rules as full_case in process $proc$rtl/c4004_core.v:263$120 in module c4004_core.
+Marked 5 switch rules as full_case in process $proc$rtl/c4004_core.v:220$82 in module c4004_core.
+Removed 1 dead cases from process $proc$rtl/c4004_core.v:80$42 in module c4004_core.
+Marked 12 switch rules as full_case in process $proc$rtl/c4004_core.v:80$42 in module c4004_core.
 Removed a total of 1 dead cases.
 
 5.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
@@ -48,14 +48,14 @@ Promoted 9 assignments to connections.
 5.4. Executing PROC_INIT pass (extract init attributes).
 
 5.5. Executing PROC_ARST pass (detect async resets in processes).
-Found async reset \rst_n in `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:313$147'.
+Found async reset \rst_n in `\c4004_core.$proc$rtl/c4004_core.v:313$147'.
 
 5.6. Executing PROC_ROM pass (convert switches to ROMs).
 Converted 0 switches.
 <suppressed ~44 debug messages>
 
 5.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
-Creating decoders for process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:313$147'.
+Creating decoders for process `\c4004_core.$proc$rtl/c4004_core.v:313$147'.
      1/16: $0\phase[2:0]
      2/16: $0\wpm_half[0:0]
      3/16: $0\dcl_reg[2:0]
@@ -72,7 +72,7 @@ Creating decoders for process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_D
     14/16: $0\opr[3:0]
     15/16: $0\cy[0:0]
     16/16: $0\acc[3:0]
-Creating decoders for process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:263$120'.
+Creating decoders for process `\c4004_core.$proc$rtl/c4004_core.v:263$120'.
      1/8: $4\d_out[3:0]
      2/8: $4\d_oe[0:0]
      3/8: $3\d_out[3:0]
@@ -81,7 +81,7 @@ Creating decoders for process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_D
      6/8: $2\d_oe[0:0]
      7/8: $1\d_out[3:0]
      8/8: $1\d_oe[0:0]
-Creating decoders for process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:220$82'.
+Creating decoders for process `\c4004_core.$proc$rtl/c4004_core.v:220$82'.
      1/15: $5\alu_cin[0:0]
      2/15: $5\alu_b[3:0]
      3/15: $5\alu_a[3:0]
@@ -97,7 +97,7 @@ Creating decoders for process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_D
     13/15: $1\alu_cin[0:0]
     14/15: $1\alu_b[3:0]
     15/15: $1\alu_a[3:0]
-Creating decoders for process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:80$42'.
+Creating decoders for process `\c4004_core.$proc$rtl/c4004_core.v:80$42'.
      1/48: $12\sram_ce_en[0:0]
      2/48: $12\sram_we[0:0]
      3/48: $12\sram_din[3:0]
@@ -148,61 +148,61 @@ Creating decoders for process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_D
     48/48: $1\sram_din[3:0]
 
 5.8. Executing PROC_DLATCH pass (convert process syncs to latches).
-No latch inferred for signal `\c4004_core.\d_out' from process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:263$120'.
-No latch inferred for signal `\c4004_core.\d_oe' from process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:263$120'.
-No latch inferred for signal `\c4004_core.\alu_a' from process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:220$82'.
-No latch inferred for signal `\c4004_core.\alu_b' from process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:220$82'.
-No latch inferred for signal `\c4004_core.\alu_cin' from process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:220$82'.
-No latch inferred for signal `\c4004_core.\sram_addr' from process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:80$42'.
-No latch inferred for signal `\c4004_core.\sram_din' from process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:80$42'.
-No latch inferred for signal `\c4004_core.\sram_we' from process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:80$42'.
-No latch inferred for signal `\c4004_core.\sram_ce_en' from process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:80$42'.
+No latch inferred for signal `\c4004_core.\d_out' from process `\c4004_core.$proc$rtl/c4004_core.v:263$120'.
+No latch inferred for signal `\c4004_core.\d_oe' from process `\c4004_core.$proc$rtl/c4004_core.v:263$120'.
+No latch inferred for signal `\c4004_core.\alu_a' from process `\c4004_core.$proc$rtl/c4004_core.v:220$82'.
+No latch inferred for signal `\c4004_core.\alu_b' from process `\c4004_core.$proc$rtl/c4004_core.v:220$82'.
+No latch inferred for signal `\c4004_core.\alu_cin' from process `\c4004_core.$proc$rtl/c4004_core.v:220$82'.
+No latch inferred for signal `\c4004_core.\sram_addr' from process `\c4004_core.$proc$rtl/c4004_core.v:80$42'.
+No latch inferred for signal `\c4004_core.\sram_din' from process `\c4004_core.$proc$rtl/c4004_core.v:80$42'.
+No latch inferred for signal `\c4004_core.\sram_we' from process `\c4004_core.$proc$rtl/c4004_core.v:80$42'.
+No latch inferred for signal `\c4004_core.\sram_ce_en' from process `\c4004_core.$proc$rtl/c4004_core.v:80$42'.
 
 5.9. Executing PROC_DFF pass (convert process syncs to FFs).
-Creating register for signal `\c4004_core.\phase' using process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:313$147'.
+Creating register for signal `\c4004_core.\phase' using process `\c4004_core.$proc$rtl/c4004_core.v:313$147'.
   created $adff cell `$procdff$1116' with positive edge clock and positive level reset.
-Creating register for signal `\c4004_core.\acc' using process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:313$147'.
+Creating register for signal `\c4004_core.\acc' using process `\c4004_core.$proc$rtl/c4004_core.v:313$147'.
   created $adff cell `$procdff$1121' with positive edge clock and positive level reset.
-Creating register for signal `\c4004_core.\cy' using process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:313$147'.
+Creating register for signal `\c4004_core.\cy' using process `\c4004_core.$proc$rtl/c4004_core.v:313$147'.
   created $adff cell `$procdff$1126' with positive edge clock and positive level reset.
-Creating register for signal `\c4004_core.\opr' using process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:313$147'.
+Creating register for signal `\c4004_core.\opr' using process `\c4004_core.$proc$rtl/c4004_core.v:313$147'.
   created $adff cell `$procdff$1131' with positive edge clock and positive level reset.
-Creating register for signal `\c4004_core.\opa' using process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:313$147'.
+Creating register for signal `\c4004_core.\opa' using process `\c4004_core.$proc$rtl/c4004_core.v:313$147'.
   created $adff cell `$procdff$1136' with positive edge clock and positive level reset.
-Creating register for signal `\c4004_core.\sp' using process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:313$147'.
+Creating register for signal `\c4004_core.\sp' using process `\c4004_core.$proc$rtl/c4004_core.v:313$147'.
   created $adff cell `$procdff$1141' with positive edge clock and positive level reset.
-Creating register for signal `\c4004_core.\two_cycle' using process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:313$147'.
+Creating register for signal `\c4004_core.\two_cycle' using process `\c4004_core.$proc$rtl/c4004_core.v:313$147'.
   created $adff cell `$procdff$1146' with positive edge clock and positive level reset.
-Creating register for signal `\c4004_core.\pc_init_n' using process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:313$147'.
+Creating register for signal `\c4004_core.\pc_init_n' using process `\c4004_core.$proc$rtl/c4004_core.v:313$147'.
   created $adff cell `$procdff$1151' with positive edge clock and positive level reset.
-Creating register for signal `\c4004_core.\isz_taken' using process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:313$147'.
+Creating register for signal `\c4004_core.\isz_taken' using process `\c4004_core.$proc$rtl/c4004_core.v:313$147'.
   created $adff cell `$procdff$1156' with positive edge clock and positive level reset.
-Creating register for signal `\c4004_core.\pc_cout' using process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:313$147'.
+Creating register for signal `\c4004_core.\pc_cout' using process `\c4004_core.$proc$rtl/c4004_core.v:313$147'.
   created $adff cell `$procdff$1161' with positive edge clock and positive level reset.
-Creating register for signal `\c4004_core.\buf_l' using process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:313$147'.
+Creating register for signal `\c4004_core.\buf_l' using process `\c4004_core.$proc$rtl/c4004_core.v:313$147'.
   created $adff cell `$procdff$1166' with positive edge clock and positive level reset.
-Creating register for signal `\c4004_core.\buf_m' using process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:313$147'.
+Creating register for signal `\c4004_core.\buf_m' using process `\c4004_core.$proc$rtl/c4004_core.v:313$147'.
   created $adff cell `$procdff$1171' with positive edge clock and positive level reset.
-Creating register for signal `\c4004_core.\buf_h' using process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:313$147'.
+Creating register for signal `\c4004_core.\buf_h' using process `\c4004_core.$proc$rtl/c4004_core.v:313$147'.
   created $adff cell `$procdff$1176' with positive edge clock and positive level reset.
-Creating register for signal `\c4004_core.\reg_buf' using process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:313$147'.
+Creating register for signal `\c4004_core.\reg_buf' using process `\c4004_core.$proc$rtl/c4004_core.v:313$147'.
   created $adff cell `$procdff$1181' with positive edge clock and positive level reset.
-Creating register for signal `\c4004_core.\dcl_reg' using process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:313$147'.
+Creating register for signal `\c4004_core.\dcl_reg' using process `\c4004_core.$proc$rtl/c4004_core.v:313$147'.
   created $adff cell `$procdff$1186' with positive edge clock and positive level reset.
-Creating register for signal `\c4004_core.\wpm_half' using process `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:313$147'.
+Creating register for signal `\c4004_core.\wpm_half' using process `\c4004_core.$proc$rtl/c4004_core.v:313$147'.
   created $adff cell `$procdff$1191' with positive edge clock and positive level reset.
 
 5.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
 
 5.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
-Found and cleaned up 23 empty switches in `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:313$147'.
-Removing empty process `c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:313$147'.
-Found and cleaned up 4 empty switches in `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:263$120'.
-Removing empty process `c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:263$120'.
-Found and cleaned up 5 empty switches in `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:220$82'.
-Removing empty process `c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:220$82'.
-Found and cleaned up 12 empty switches in `\c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:80$42'.
-Removing empty process `c4004_core.$proc$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:80$42'.
+Found and cleaned up 23 empty switches in `\c4004_core.$proc$rtl/c4004_core.v:313$147'.
+Removing empty process `c4004_core.$proc$rtl/c4004_core.v:313$147'.
+Found and cleaned up 4 empty switches in `\c4004_core.$proc$rtl/c4004_core.v:263$120'.
+Removing empty process `c4004_core.$proc$rtl/c4004_core.v:263$120'.
+Found and cleaned up 5 empty switches in `\c4004_core.$proc$rtl/c4004_core.v:220$82'.
+Removing empty process `c4004_core.$proc$rtl/c4004_core.v:220$82'.
+Found and cleaned up 12 empty switches in `\c4004_core.$proc$rtl/c4004_core.v:80$42'.
+Removing empty process `c4004_core.$proc$rtl/c4004_core.v:80$42'.
 Cleaned up 44 empty switches.
 
 5.12. Executing OPT_EXPR pass (perform const folding).
@@ -259,14 +259,14 @@ Removed 0 multiplexer ports.
       Old ports: A=$8\sram_addr[4:0], B={ 1'1 \sp 2'01 }, Y=$procmux$856_Y
       New ports: A=2'10, B=2'01, Y=$procmux$856_Y [1:0]
       New connections: $procmux$856_Y [4:2] = { 1'1 \sp }
-    Consolidated identical input bits for $mux cell $ternary$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:447$164:
-      Old ports: A=4'1001, B=4'1010, Y=$ternary$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:447$164_Y
-      New ports: A=2'01, B=2'10, Y=$ternary$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:447$164_Y [1:0]
-      New connections: $ternary$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:447$164_Y [3:2] = 2'10
-    Consolidated identical input bits for $mux cell $ternary$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:245$103:
-      Old ports: A=4'0000, B=4'0110, Y=$ternary$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:245$103_Y
-      New ports: A=1'0, B=1'1, Y=$ternary$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:245$103_Y [1]
-      New connections: { $ternary$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:245$103_Y [3:2] $ternary$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:245$103_Y [0] } = { 1'0 $ternary$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:245$103_Y [1] 1'0 }
+    Consolidated identical input bits for $mux cell $ternary$rtl/c4004_core.v:447$164:
+      Old ports: A=4'1001, B=4'1010, Y=$ternary$rtl/c4004_core.v:447$164_Y
+      New ports: A=2'01, B=2'10, Y=$ternary$rtl/c4004_core.v:447$164_Y [1:0]
+      New connections: $ternary$rtl/c4004_core.v:447$164_Y [3:2] = 2'10
+    Consolidated identical input bits for $mux cell $ternary$rtl/c4004_core.v:245$103:
+      Old ports: A=4'0000, B=4'0110, Y=$ternary$rtl/c4004_core.v:245$103_Y
+      New ports: A=1'0, B=1'1, Y=$ternary$rtl/c4004_core.v:245$103_Y [1]
+      New connections: { $ternary$rtl/c4004_core.v:245$103_Y [3:2] $ternary$rtl/c4004_core.v:245$103_Y [0] } = { 1'0 $ternary$rtl/c4004_core.v:245$103_Y [1] 1'0 }
     New ctrl vector for $pmux cell $procmux$442: { $procmux$443_CMP $procmux$447_CMP $auto$opt_reduce.cc:137:opt_pmux$1210 $auto$opt_reduce.cc:137:opt_pmux$1208 $procmux$452_CTRL }
     New ctrl vector for $pmux cell $procmux$432: { $procmux$445_CMP [2] $auto$opt_reduce.cc:137:opt_pmux$1212 $procmux$445_CMP [0] $procmux$436_CMP $procmux$437_CMP $procmux$438_CMP $procmux$439_CMP $procmux$441_CMP }
     New input vector for $reduce_or cell $auto$opt_reduce.cc:131:opt_pmux$1211: { $procmux$446_CMP $procmux$440_CMP [0] }
@@ -275,10 +275,10 @@ Removed 0 multiplexer ports.
       Old ports: A=$11\sram_addr[4:0], B=5'00001, Y=$procmux$767_Y
       New ports: A={ \opa [3:1] $procmux$729_Y [0] }, B=4'0001, Y=$procmux$767_Y [3:0]
       New connections: $procmux$767_Y [4] = 1'0
-    Consolidated identical input bits for $mux cell $ternary$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:244$104:
-      Old ports: A=$ternary$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:245$103_Y, B=4'1111, Y=$ternary$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:244$104_Y
-      New ports: A={ $ternary$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:245$103_Y [1] 1'0 }, B=2'11, Y=$ternary$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:244$104_Y [1:0]
-      New connections: $ternary$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:244$104_Y [3:2] = { $ternary$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:244$104_Y [0] $ternary$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:244$104_Y [1] }
+    Consolidated identical input bits for $mux cell $ternary$rtl/c4004_core.v:244$104:
+      Old ports: A=$ternary$rtl/c4004_core.v:245$103_Y, B=4'1111, Y=$ternary$rtl/c4004_core.v:244$104_Y
+      New ports: A={ $ternary$rtl/c4004_core.v:245$103_Y [1] 1'0 }, B=2'11, Y=$ternary$rtl/c4004_core.v:244$104_Y [1:0]
+      New connections: $ternary$rtl/c4004_core.v:244$104_Y [3:2] = { $ternary$rtl/c4004_core.v:244$104_Y [0] $ternary$rtl/c4004_core.v:244$104_Y [1] }
   Optimizing cells in module \c4004_core.
 Performed a total of 21 changes.
 
@@ -304,10 +304,10 @@ Adding EN signal on $procdff$1136 ($adff) from module c4004_core (D = \d_in, Q =
 Adding EN signal on $procdff$1186 ($adff) from module c4004_core (D = \acc [2:0], Q = \dcl_reg).
 Adding EN signal on $procdff$1166 ($adff) from module c4004_core (D = $procmux$288_Y, Q = \buf_l).
 Adding EN signal on $procdff$1131 ($adff) from module c4004_core (D = \d_in, Q = \opr).
-Adding EN signal on $procdff$1191 ($adff) from module c4004_core (D = $not$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:410$161_Y, Q = \wpm_half).
+Adding EN signal on $procdff$1191 ($adff) from module c4004_core (D = $not$rtl/c4004_core.v:410$161_Y, Q = \wpm_half).
 Adding EN signal on $procdff$1151 ($adff) from module c4004_core (D = $procmux$337_Y, Q = \pc_init_n).
 Adding EN signal on $procdff$1176 ($adff) from module c4004_core (D = $procmux$241_Y, Q = \buf_h).
-Adding EN signal on $procdff$1156 ($adff) from module c4004_core (D = $ne$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:387$159_Y, Q = \isz_taken).
+Adding EN signal on $procdff$1156 ($adff) from module c4004_core (D = $ne$rtl/c4004_core.v:387$159_Y, Q = \isz_taken).
 Adding EN signal on $procdff$1141 ($adff) from module c4004_core (D = $procmux$369_Y, Q = \sp).
 
 6.8. Executing OPT_CLEAN pass (remove unused cells and wires).
@@ -340,8 +340,8 @@ Removed 0 multiplexer ports.
     Consolidated identical input bits for $pmux cell $procmux$248:
       Old ports: A=$procmux$246_Y, B={ \reg_buf $procmux$252_Y }, Y=$procmux$248_Y
       New connections: $procmux$248_Y = \reg_buf
-    New ctrl vector for $pmux cell $procmux$215: { $eq$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:302$123_Y $procmux$1005_CMP }
-    New ctrl vector for $pmux cell $procmux$412: $eq$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:306$138_Y
+    New ctrl vector for $pmux cell $procmux$215: { $eq$rtl/c4004_core.v:302$123_Y $procmux$1005_CMP }
+    New ctrl vector for $pmux cell $procmux$412: $eq$rtl/c4004_core.v:306$138_Y
   Optimizing cells in module \c4004_core.
 Performed a total of 5 changes.
 
@@ -356,8 +356,8 @@ Removed a total of 16 cells.
 
 6.14. Executing OPT_SHARE pass.
     Found cells that share an operand and can be merged by moving the $mux $procmux$369 in front of them:
-        $add$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:508$182
-        $sub$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:401$160
+        $add$rtl/c4004_core.v:508$182
+        $sub$rtl/c4004_core.v:401$160
 
 6.15. Executing OPT_DFF pass (perform DFF optimizations).
 
@@ -549,12 +549,12 @@ Optimizing module c4004_core.
 9. Executing WREDUCE pass (reducing word size of cells).
 Removed top 2 bits (of 9) from port B of cell c4004_core.$auto$opt_dff.cc:320:make_patterns_logic$1246 ($ne).
 Removed top 2 bits (of 8) from port B of cell c4004_core.$auto$opt_dff.cc:320:make_patterns_logic$1215 ($ne).
-Removed top 2 bits (of 3) from port B of cell c4004_core.$eq$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:57$5 ($eq).
-Removed top 1 bits (of 2) from port B of cell c4004_core.$eq$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:223$85 ($eq).
-Removed top 1 bits (of 3) from port B of cell c4004_core.$eq$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:226$90 ($eq).
-Removed top 2 bits (of 3) from port B of cell c4004_core.$add$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:332$149 ($add).
-Removed top 2 bits (of 4) from port B of cell c4004_core.$eq$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:476$167 ($eq).
-Removed top 2 bits (of 4) from port B of cell c4004_core.$eq$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:483$181 ($eq).
+Removed top 2 bits (of 3) from port B of cell c4004_core.$eq$rtl/c4004_core.v:57$5 ($eq).
+Removed top 1 bits (of 2) from port B of cell c4004_core.$eq$rtl/c4004_core.v:223$85 ($eq).
+Removed top 1 bits (of 3) from port B of cell c4004_core.$eq$rtl/c4004_core.v:226$90 ($eq).
+Removed top 2 bits (of 3) from port B of cell c4004_core.$add$rtl/c4004_core.v:332$149 ($add).
+Removed top 2 bits (of 4) from port B of cell c4004_core.$eq$rtl/c4004_core.v:476$167 ($eq).
+Removed top 2 bits (of 4) from port B of cell c4004_core.$eq$rtl/c4004_core.v:483$181 ($eq).
 Removed top 1 bits (of 4) from port B of cell c4004_core.$procmux$212_CMP0 ($eq).
 Removed top 1 bits (of 4) from port B of cell c4004_core.$procmux$323_CMP0 ($eq).
 Removed top 1 bits (of 4) from port B of cell c4004_core.$procmux$325_CMP0 ($eq).
@@ -573,7 +573,7 @@ Removed top 2 bits (of 4) from port B of cell c4004_core.$procmux$440_CMP0 ($eq)
 Removed top 1 bits (of 3) from port B of cell c4004_core.$procmux$1108_CMP0 ($eq).
 Removed top 1 bits (of 3) from port B of cell c4004_core.$procmux$1109_CMP0 ($eq).
 Removed top 2 bits (of 3) from port B of cell c4004_core.$procmux$1110_CMP0 ($eq).
-Removed top 2 bits (of 4) from wire c4004_core.$ternary$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:447$164_Y.
+Removed top 2 bits (of 4) from wire c4004_core.$ternary$rtl/c4004_core.v:447$164_Y.
 Removed top 1 bits (of 5) from wire c4004_core.$11\sram_addr[4:0].
 Removed top 1 bits (of 5) from wire c4004_core.$10\sram_addr[4:0].
 Removed top 1 bits (of 5) from wire c4004_core.$7\sram_addr[4:0].
@@ -734,8 +734,8 @@ Optimizing module c4004_core.
 
 15. Executing TECHMAP pass (map to technology primitives).
 
-15.1. Executing Verilog-2005 frontend: /Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/openroad/dffe_map.v
-Parsing Verilog input from `/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/openroad/dffe_map.v' to AST representation.
+15.1. Executing Verilog-2005 frontend: openroad/dffe_map.v
+Parsing Verilog input from `openroad/dffe_map.v' to AST representation.
 Generating RTLIL representation for module `$_DFFE_PN0P_'.
 Generating RTLIL representation for module `$_DFFE_PN0N_'.
 Successfully finished Verilog frontend.
@@ -908,14 +908,14 @@ Removed 0 unused cells and 736 unused wires.
 <suppressed ~28 debug messages>
 
 20. Executing INSBUF pass (insert buffer cells for connected wires).
-Add c4004_core/$auto$insbuf.cc:97:execute$4853: \phase [1] -> $techmap$add$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:332$149.$auto$alumacc.cc:548:replace_alu$2071.P [1]
-Add c4004_core/$auto$insbuf.cc:97:execute$4854: \phase [2] -> $techmap$add$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:332$149.$auto$alumacc.cc:548:replace_alu$2071.P [2]
-Add c4004_core/$auto$insbuf.cc:97:execute$4855: $techmap$add$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:332$149.$auto$alumacc.cc:548:replace_alu$2071.P [0] -> $techmap$add$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:332$149.$auto$alumacc.cc:548:replace_alu$2071.Y [0]
-Add c4004_core/$auto$insbuf.cc:97:execute$4856: \acc [0] -> $techmap$gt$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:215$80.$auto$alumacc.cc:548:replace_alu$1960.P [0]
-Add c4004_core/$auto$insbuf.cc:97:execute$4857: \acc [3] -> $techmap$gt$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:215$80.$auto$alumacc.cc:548:replace_alu$1960.P [3]
-Add c4004_core/$auto$insbuf.cc:97:execute$4858: \opr [0] -> $techmap$le$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:63$30.$auto$alumacc.cc:548:replace_alu$1915.P [0]
-Add c4004_core/$auto$insbuf.cc:97:execute$4859: \opr [1] -> $techmap$le$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:63$30.$auto$alumacc.cc:548:replace_alu$1915.P [1]
-Add c4004_core/$auto$insbuf.cc:97:execute$4860: \opr [3] -> $techmap$le$/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_10/rtl/c4004_core.v:63$30.$auto$alumacc.cc:548:replace_alu$1915.P [3]
+Add c4004_core/$auto$insbuf.cc:97:execute$4853: \phase [1] -> $techmap$add$rtl/c4004_core.v:332$149.$auto$alumacc.cc:548:replace_alu$2071.P [1]
+Add c4004_core/$auto$insbuf.cc:97:execute$4854: \phase [2] -> $techmap$add$rtl/c4004_core.v:332$149.$auto$alumacc.cc:548:replace_alu$2071.P [2]
+Add c4004_core/$auto$insbuf.cc:97:execute$4855: $techmap$add$rtl/c4004_core.v:332$149.$auto$alumacc.cc:548:replace_alu$2071.P [0] -> $techmap$add$rtl/c4004_core.v:332$149.$auto$alumacc.cc:548:replace_alu$2071.Y [0]
+Add c4004_core/$auto$insbuf.cc:97:execute$4856: \acc [0] -> $techmap$gt$rtl/c4004_core.v:215$80.$auto$alumacc.cc:548:replace_alu$1960.P [0]
+Add c4004_core/$auto$insbuf.cc:97:execute$4857: \acc [3] -> $techmap$gt$rtl/c4004_core.v:215$80.$auto$alumacc.cc:548:replace_alu$1960.P [3]
+Add c4004_core/$auto$insbuf.cc:97:execute$4858: \opr [0] -> $techmap$le$rtl/c4004_core.v:63$30.$auto$alumacc.cc:548:replace_alu$1915.P [0]
+Add c4004_core/$auto$insbuf.cc:97:execute$4859: \opr [1] -> $techmap$le$rtl/c4004_core.v:63$30.$auto$alumacc.cc:548:replace_alu$1915.P [1]
+Add c4004_core/$auto$insbuf.cc:97:execute$4860: \opr [3] -> $techmap$le$rtl/c4004_core.v:63$30.$auto$alumacc.cc:548:replace_alu$1915.P [3]
 Add c4004_core/$auto$insbuf.cc:97:execute$4861: 1'x -> \bank_sel [0]
 
 21. Executing SPLITNETS pass (splitting up multi-bit signals).

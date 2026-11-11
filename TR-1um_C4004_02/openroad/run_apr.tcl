@@ -1,4 +1,4 @@
-set base_dir "/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_02"
+set base_dir [file dirname [file dirname [file normalize [info script]]]]
 read_lef "$base_dir/openroad/TR-1um_tech_clean.lef"
 read_lef "$base_dir/openroad/TR-1um_cells_m2only.lef"
 read_lef "$base_dir/openroad/SRAM128_clean.lef"

@@ -1,7 +1,10 @@
+import os
 import pya
 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 ly = pya.Layout()
-ly.read("/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_01/module/STDCELL/TR-1um_STDCELL.gds")
+ly.read(os.path.join(BASE_DIR, "module/STDCELL/TR-1um_STDCELL.gds"))
 print("=== STDCELL GDS CELLS ===")
 for c in ly.each_cell():
     bbox = c.bbox()
@@ -18,7 +21,7 @@ for c in ly.each_cell():
                     print(f"  L({lp.layer}/{lp.datatype}): {len(shapes)} shapes: {shapes[:8]}")
 
 ly2 = pya.Layout()
-ly2.read("/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_01/module/SRAM128/SRAM128.gds")
+ly2.read(os.path.join(BASE_DIR, "module/SRAM128/SRAM128.gds"))
 top2 = ly2.top_cell()
 b2 = top2.bbox()
 print(f"\n=== SRAM128 GDS top={top2.name}: bbox=({b2.left*ly2.dbu:.3f}, {b2.bottom*ly2.dbu:.3f})..({b2.right*ly2.dbu:.3f}, {b2.top*ly2.dbu:.3f}) ===")

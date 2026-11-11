@@ -2,7 +2,7 @@
 <report-database>
  <description>TR-1um DRC(Drawing)</description>
  <original-file/>
- <generator>drc: script='/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_01/TR-1um/libs.tech/klayout/tech/drc/run.drc'</generator>
+ <generator>drc: script='TR-1um_C4004_01/TR-1um/libs.tech/klayout/tech/drc/run.drc'</generator>
  <top-cell>tr_1um_jun1okamura</top-cell>
  <tags>
  </tags>

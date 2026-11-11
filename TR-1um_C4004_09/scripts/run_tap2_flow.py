@@ -3,12 +3,12 @@ import re
 import json
 from collections import defaultdict
 
-BASE_DIR = "/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/TR-1um_C4004_09"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SYN_V          = os.path.join(BASE_DIR, "openroad/c4004_core_syn.v")
 CELL_INFO_JSON = os.path.join(BASE_DIR, "module/STDCELL/cell_info.json")
 ROW_MAP_JSON   = os.path.join(BASE_DIR, "openroad/ff_row_map.json")
 OUT_DEF        = os.path.join(BASE_DIR, "openroad/c4004_core_placed.def")
-GPL_DEF        = "/Users/okamura/Dropbox/98_LSI_Design/TR-1um_C4004_Clone2Build/tmp/gpl_coords.def"
+GPL_DEF        = os.path.join(BASE_DIR, "tmp/gpl_coords.def") if os.path.exists(os.path.join(BASE_DIR, "tmp/gpl_coords.def")) else "./tmp/gpl_coords.def"
 
 with open(CELL_INFO_JSON, "r") as f:
     CELL_INFO = json.load(f)
